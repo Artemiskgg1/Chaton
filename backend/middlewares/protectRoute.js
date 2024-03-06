@@ -15,7 +15,7 @@ const protectRoute = async (req, res, next) => {
         .status(401)
         .json({ error: "Unauthorized - Token Verification Failed" });
     }
-    const user = await User.findById(decoded.userId.select("-password"));
+    const user = await User.findById(decoded.userId).select("-password");
     if (!user) {
       return res.status(404).json({ error: "No user found with this id" });
     }
