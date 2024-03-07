@@ -1,4 +1,3 @@
-import React from "react";
 import { IoMdSearch } from "react-icons/io";
 function SearchInput() {
   return (
