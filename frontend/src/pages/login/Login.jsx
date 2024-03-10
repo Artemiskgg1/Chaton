@@ -1,4 +1,5 @@
 import logo from "../../assets/chaton2.png";
+import { Link } from "react-router-dom";
 function Login() {
   return (
     <div className="flex flex-col items-center justify-center min-w-96 mx-auto bg-zinc-800">
@@ -31,12 +32,12 @@ function Login() {
           </div>
           <div className="justify-center items-center flex mt-2 ">
             Don't have an account?
-            <a
-              href="#"
+            <Link
+              to="/signup"
               className="hover:underline hover:text-purple-500 text-base font-semibold "
             >
               Register
-            </a>
+            </Link>
           </div>
           <div className="justify-center items-center flex ">
             <button className="btn btn-primary btn-sm mt-2 bg-purple-500 hover:bg-purple-600 hover:border-purple-600 border-purple-500">
