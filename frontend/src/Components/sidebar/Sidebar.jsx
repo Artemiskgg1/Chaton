@@ -3,7 +3,7 @@ import Conversations from "./Conversations";
 import LogoutButton from "./LogoutButton";
 function Sidebar() {
   return (
-    <div className="border-r border-yellow-900 p-4 flex flex-col">
+    <div className="border-r border-zinc-700 p-4 flex flex-col">
       <SearchInput />
       <div className="divider px-3"></div>
       <Conversations />
