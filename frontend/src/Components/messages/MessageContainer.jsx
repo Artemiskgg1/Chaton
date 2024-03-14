@@ -2,12 +2,13 @@ import React from "react";
 import Messages from "./Messages";
 import MessageInput from "./MessageInput";
 import Logo from "../../assets/chaton2.png";
+import useConversation from "../../zustand/useConversation";
 
 function MessageContainer() {
-  const noChatSelected = true;
+  const { selectedConversation, setSelectedConversation } = useConversation();
   return (
     <div className="md:w-full flex flex-col">
-      {noChatSelected ? (
+      {!selectedConversation ? (
         <NoChatSelected />
       ) : (
         <>

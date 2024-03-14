@@ -1,7 +1,14 @@
+import useConversation from "../../zustand/useConversation";
 function Conversation({ conversation, lastIdx, emoji }) {
+  const { selectedConversation, setSelectedConversation } = useConversation();
+  const isSelected = selectedConversation?._id === conversation._id;
   return (
     <>
-      <div className="flex gap-2 items-center hover:bg-purple-900 rounded p-2 py-1 cursor-pointer">
+      <div
+        className={`flex gap-2 items-center hover:bg-purple-900 rounded p-2 py-1 cursor-pointer
+          ${isSelected ? "bg-purple-900" : ""}`}
+        onClick={() => setSelectedConversation(conversation)}
+      >
         <div className="avatar online">
           <div className="w-12 rounded-full">
             <img src={conversation.profilePicture} alt="user avatar" />

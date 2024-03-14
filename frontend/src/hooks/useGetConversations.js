@@ -8,12 +8,18 @@ const useGetConversations = () => {
       setLoading(true);
       try {
         const res = await fetch("/api/users");
+        if (!res.ok) {
+          throw new Error("Failed to fetch conversations");
+        }
         const data = await res.json();
+        console.log("Data from API:", data);
         if (data.error) {
           throw new Error(data.error);
         }
+        setConversations(data.users);
       } catch (error) {
         toast.error(error.message);
+        setConversations([]);
       } finally {
         setLoading(false);
       }
