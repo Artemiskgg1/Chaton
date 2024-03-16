@@ -3,6 +3,7 @@ import Messages from "./Messages";
 import MessageInput from "./MessageInput";
 import Logo from "../../assets/chaton2.png";
 import useConversation from "../../zustand/useConversation";
+import { useAuthContext } from "../../context/AuthContext";
 
 function MessageContainer() {
   const { selectedConversation, setSelectedConversation } = useConversation();
@@ -30,10 +31,11 @@ function MessageContainer() {
 }
 
 const NoChatSelected = () => {
+  const { authUser } = useAuthContext();
   return (
     <div className="flex flex-col items-center justify-center w-full h-full">
       <img className=" w-64 h-64 pb-4" src={Logo} alt="chaton-logo" />
-      <p className="text-gray-500 text-lg">Welcome Artemis!</p>
+      <p className="text-gray-500 text-lg">Welcome {authUser.fullName}!</p>
       <p className="text-gray-500 text-lg">Select a chat to start messaging</p>
     </div>
   );
