@@ -62,7 +62,7 @@ devDependencies:
     specifier: ^3.4.1
     version: 3.4.1
   vite:
-    specifier: ^5.1.4
+    specifier: ^5.1.5
     version: 5.1.5
 
 packages:
