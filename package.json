@@ -4,7 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon backend/server.js"
+    "dev": "nodemon backend/server.js",
+    "start": "node backend/server.js",
+    "build:frontend": "cd frontend && pnpm build",
+    "build:backend": "cd backend && pnpm build",
+    "build": "pnpm run build:frontend && pnpm run build:backend"
   },
   "type": "module",
   "keywords": [],
