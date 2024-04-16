@@ -10,22 +10,24 @@ function App() {
   return (
     <>
       <div className="h-screen w-screen flex items-center justify-center bg-zinc-900">
-        <Routes>
-          <Route
-            path="/"
-            element={authUser ? <Home /> : <Navigate to="/login" />}
-          />
-          <Route
-            path="/login"
-            element={authUser ? <Navigate to="/" /> : <Login />}
-          />
+        <AuthContextProvider>
+          <Routes>
+            <Route
+              path="/"
+              element={authUser ? <Home /> : <Navigate to="/login" />}
+            />
+            <Route
+              path="/login"
+              element={authUser ? <Navigate to="/" /> : <Login />}
+            />
 
-          <Route
-            path="/signup"
-            element={authUser ? <Navigate to="/" /> : <Signup />}
-          />
-        </Routes>
-        <Toaster />
+            <Route
+              path="/signup"
+              element={authUser ? <Navigate to="/" /> : <Signup />}
+            />
+          </Routes>
+          <Toaster />
+        </AuthContextProvider>
       </div>
     </>
   );
