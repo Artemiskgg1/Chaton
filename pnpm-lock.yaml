@@ -40,7 +40,7 @@ importers:
         version: 0.1.11
       pnpm:
         specifier: ^9.11.0
-        version: 9.11.0
+        version: 9.15.0
       socket.io:
         specifier: ^4.7.4
         version: 4.7.4
@@ -763,8 +763,8 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
-  pnpm@9.11.0:
-    resolution: {integrity: sha512-CiA/+u1aP2MkLNBkyPtYkjZsED4ygHkxj3gGLyTqjJ1QvGpHqjVnyr79gk0XDnj6J0XtHxaxMuFkNhRrdojxmw==}
+  pnpm@9.15.0:
+    resolution: {integrity: sha512-duI3l2CkMo7EQVgVvNZije5yevN3mqpMkU45RBVsQpmSGon5djge4QfUHxLPpLZmgcqccY8GaPoIMe1MbYulbA==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -1635,7 +1635,7 @@ snapshots:
 
   picomatch@2.3.1: {}
 
-  pnpm@9.11.0: {}
+  pnpm@9.15.0: {}
 
   postcss@8.4.47:
     dependencies:
