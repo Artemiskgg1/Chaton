@@ -11,6 +11,7 @@ const generateTokenAndSetCookie = (userId, res) => {
     sameSite: "strict",
     secure: process.env.NODE_ENV !== "development",
   });
+  console.log("Token Generation Successful");
 };
 
 export default generateTokenAndSetCookie;
