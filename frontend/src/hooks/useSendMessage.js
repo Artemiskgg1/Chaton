@@ -2,6 +2,8 @@ import { useState } from "react";
 import useConversation from "../zustand/useConversation";
 import toast from "react-hot-toast";
 
+const API_BASE_URL = import.meta.env.VITE_SOCKET_URL;
+
 const useSendMessage = () => {
   const [loading, setLoading] = useState(false);
   const { messages, setMessages, selectedConversation } = useConversation();
@@ -10,7 +12,7 @@ const useSendMessage = () => {
     setLoading(true);
     try {
       const res = await fetch(
-        `/api/messages/send/${selectedConversation._id}`,
+        `${API_BASE_URL}/api/messages/send/${selectedConversation._id}`,
         {
           method: "POST",
           headers: {

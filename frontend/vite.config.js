@@ -7,7 +7,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: process.env.VITE_SOCKET_URL, // Updated to use env variable
+        target: process.env.VITE_SOCKET_URL,
         changeOrigin: true,
         secure: false,
       },
